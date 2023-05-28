@@ -1,0 +1,68 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class MyAdapter extends RecyclerView.Adapter {
+    Context context;
+    List<User> list;
+    private OnItemClickListener itemClickListener;
+}
+
+class AdminPageFragment extends Fragment implements MyAdapter.OnItemClickListener {
+    private SharedPreferences sp;
+    private String keyTEAM;
+    private DatabaseReference databaseRef;
+    private List<User> items;
+    private MyAdapter adapter;
+    private RecyclerView recyclerView;
+}
+
+class BatteryLevelReceiver extends BroadcastReceiver {
+}
+
+class CreateTeam extends AppCompatActivity {
+    DatabaseReference databaseReference;
+    SharedPreferences sp;
+}
+
+class JoinTeam extends AppCompatActivity {
+    DatabaseReference databaseReference;
+    SharedPreferences sp;
+}
+
+class Login extends AppCompatActivity {
+    DatabaseReference databaseReference;
+    SharedPreferences sp;
+    private BatteryLevelReceiver batteryLevelReceiver;
+}
+
+class MainActivity extends AppCompatActivity {
+    SharedPreferences sp;
+    String isAdmin;
+}
+
+class Register extends AppCompatActivity {
+
+    DatabaseReference databaseReference;
+    Button openDialog;
+    TextView infoTv;
+    SharedPreferences sp;
+}
+class TeamDividerFragment extends Fragment {
+
+    private SharedPreferences sp;
+    private RecyclerView list1RecyclerView;
+    private RecyclerView list2RecyclerView;
+    private MyAdapter list1Adapter;
+    private MyAdapter list2Adapter;
+}
+class TeamListFragment extends Fragment {
+
+    private SharedPreferences sp;
+    private RecyclerView list1RecyclerView;
+    private MyAdapter list1Adapter;
+}
+class User {
+
+    String fullName,overall,team, key;
+ }
+@enduml

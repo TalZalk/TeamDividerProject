@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_team"
+        android:icon="@drawable/ic_baseline_group_24"
+        android:title="Team" />
+    <item
+        android:id="@+id/nav_admin"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Admin page" />
+    <item
+        android:id="@+id/nav_play"
+        android:icon="@drawable/ic_baseline_sports_soccer_24"
+        android:title="Play" />
+
+</menu>
